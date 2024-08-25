@@ -1,11 +1,15 @@
 { config, pkgs, ... }: {
   home = {
-    packages = [
-      pkgs.yazi
+    packages = with pkgs; [
+      yazi
+      pass
+      brave
+      zoxide
     ];
 
     file = {
       ".config/my_text_file.txt".text = "Hello World, how are you!";
+      ".config/nvim/syntax/yarn.vim".text = builtins.readFile ./files/yarn.vim;
     };
 
     username = "anto";
