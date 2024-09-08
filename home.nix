@@ -5,6 +5,8 @@
       pass
       brave
       zoxide
+      scc
+      # mpv
     ];
 
     file = {
